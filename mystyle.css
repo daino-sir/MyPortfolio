@@ -1,170 +1,119 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #456990;
-  color: #fff;
-  overflow-x: hidden;
-  padding-bottom: 50px;
-}  /* INTRO SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.intro {
-  background: #F45B69;
-  padding: 100px 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Handlee", cursive;
-  font-size: 2.5rem;
-}
-
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.timeline ul {
-  background: #456990;
-  padding: 50px 0;
-}
-
-.timeline ul li {
-  list-style-type: none;
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background: #fff;
-}
-
-.timeline ul li::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: inherit;
-}
-
-.timeline ul li div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  padding: 15px;
-  background: #F45B69;
-}
-
-.timeline ul li div::before {
-  content: '';
-  position: absolute;
-  bottom: 7px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.timeline ul li:nth-child(odd) div {
-  left: 45px;
-}
-
-.timeline ul li:nth-child(odd) div::before {
-  left: -15px;
-  border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent;
-}
-
-.timeline ul li:nth-child(even) div {
-  left: -439px;
-}
-
-.timeline ul li:nth-child(even) div::before {
-  right: -15px;
-  border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #F45B69;
-}
-
-time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.timeline ul li::after {
-  transition: background .5s ease-in-out;
-}
-
-.timeline ul li.in-view::after {
-  background: #F45B69;
-}
-
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .5s ease-in-out;
-}
-
-.timeline ul li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
-}
-
-.timeline ul li.in-view div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
-  }
-  .timeline ul li:nth-child(even) div {
-    left: -289px;
-    /*250+45-6*/
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
-  .timeline ul li div {
-    width: calc(100vw - 91px);
-  }
-  .timeline ul li:nth-child(even) div {
-    left: 45px;
-  }
-  .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
-  }
-}
+                    body {
+                        background-color: rgb(140, 107, 107);
+                    }
+                    /*header,
+             :hover {
+                transition-duration: 0.8s;
+                background-color: rgb(235, 90, 90);
+            }*/
+                    
+                    #name {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        /*font-style:;*/
+                    }
+                    
+                    .card {
+                        background-color: rgb(140, 118, 118);
+                        box-shadow: 0 4px 15px 0 rgba(60, 17, 17, 0.2);
+                        max-width: 300px;
+                        margin: auto;
+                        text-align: center;
+                    }
+                    
+                    .card:hover {
+                        background-color: rgb(235, 90, 90);
+                        transition-duration: 0.5s;
+                        animation-name: stretch;
+                        animation-duration: 0.8s;
+                        animation-timing-function: ease-in;
+                        animation-direction: alternate-reverse;
+                        animation-iteration-count: initial;
+                        animation-play-state: running;
+                    }
+                    
+                    @keyframes stretch {
+                        50% {
+                            transform: scale(1.2);
+                            border-radius: 10px;
+                        }
+                    }
+                    
+                    img {
+                        box-shadow: black;
+                    }
+                    
+                    .title {
+                        color: rgb(255, 255, 255);
+                        font-size: 18px;
+                    }
+                    
+                    #institution {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    }
+                    
+                    button {
+                        border: none;
+                        outline: 0;
+                        display: inline-block;
+                        padding: 8px;
+                        color: rgb(232, 112, 112);
+                        background-color: #000;
+                        text-align: center;
+                        /*border-radius: 10px;*/
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100px;
+                        font-size: 18px;
+                    }
+                    
+                    button:hover,
+                    #link1:hover {
+                        background-color: rgb(255, 255, 255);
+                        stop-color: black;
+                        transition-duration: 0.3s;
+                        font-display: auto;
+                        animation-name: stretch;
+                        animation-duration: 0.8s;
+                        animation-timing-function: ease-in;
+                        animation-direction: alternate-reverse;
+                        animation-iteration-count: infinite;
+                        animation-play-state: running;
+                    }
+                    
+                    @keyframes stretch {
+                        50% {
+                            transform: scale(1.2);
+                            border-radius: 7px;
+                        }
+                    }
+                    
+                    #page-title {
+                        font-style: italic;
+                        text-decoration: underline;
+                        font-family: cursive;
+                        color: black;
+                        align-self: center;
+                    }
+                    
+                    #page-title:hover {
+                        color: rgb(250, 250, 250);
+                        transition-duration: 0.8s;
+                    }
+                    
+                    #link1 {
+                        font-family: cursive;
+                        text-decoration: none;
+                        font-size: 22px;
+                        color: black;
+                        border-style: solid;
+                        border-spacing: 30px;
+                        border-radius: 7px;
+                        animation: ease-in-out;
+                        animation-duration: 5s;
+                    }
+                    
+                    #more {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        color: rgb(232, 112, 112);
+                        text-decoration: none;
+                    }
