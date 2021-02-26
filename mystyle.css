@@ -23,19 +23,6 @@
                     .card:hover {
                         background-color: rgb(235, 90, 90);
                         transition-duration: 0.5s;
-                        animation-name: stretch;
-                        animation-duration: 0.8s;
-                        animation-timing-function: ease-in;
-                        animation-direction: alternate-reverse;
-                        animation-iteration-count: initial;
-                        animation-play-state: running;
-                    }
-                    
-                    @keyframes stretch {
-                        50% {
-                            transform: scale(1.2);
-                            border-radius: 10px;
-                        }
                     }
                     
                     img {
